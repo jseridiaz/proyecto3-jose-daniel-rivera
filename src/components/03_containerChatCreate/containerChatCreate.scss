@@ -1,0 +1,91 @@
+@import '../03_containerUploadCreate/containerUploadCreate.scss';
+.absolute {
+  position: fixed;
+}
+#article-message {
+  @include small-info-box(white, 87%, 375px) // background-color: white;
+;
+}
+
+#article-message::-webkit-scrollbar {
+  width: 10px;
+}
+#article-message::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#article-message::-webkit-scrollbar-thumb {
+  background: var(--rtc-color-2);
+  transition: all 0.2s ease;
+}
+#article-message::-webkit-scrollbar-thumb:hover {
+  background: var(--rtc-color-3);
+}
+#article-message > div:first-of-type {
+  justify-content: space-around;
+  gap: var(--rtc-gap-l);
+  padding: 5px;
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--rtc-color-2);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    border: 1px solid rgb(0, 0, 0, 0.4);
+    padding: 5px;
+  }
+  img:hover {
+    background-color: var(--rtc-color-1);
+  }
+}
+#article-message > div:nth-of-type(2) {
+  width: 90%;
+  margin: 1rem auto 0 auto;
+  display: flex;
+  padding: 5px;
+  background-color: white;
+  border-radius: 3rem;
+  border: 2px solid rgb(0, 0, 0, 0.4);
+}
+#article-message > div:nth-of-type(2) > img {
+  border-radius: 3rem;
+  padding: var(--rtc-padding-xs);
+  width: 40px;
+  background-color: rgb(255, 253, 253);
+  cursor: pointer;
+}
+#article-message > div:nth-of-type(2) > input {
+  width: 100%;
+  border: none;
+  border-radius: 3rem;
+}
+
+#article-message > div:nth-of-type(2):has(input:focus) {
+  border: 2px solid rgb(0, 0, 0, 0.8);
+}
+#article-message > div:nth-of-type(2) > input:focus {
+  outline: none;
+}
+#article-message > div:nth-of-type(3) {
+  width: 90%;
+  margin: 1rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  height: 50px;
+  border-radius: 6px;
+  gap: var(--rtc-gap-xs);
+  cursor: pointer;
+}
+#article-message > div:nth-of-type(3) > img {
+  border-radius: 50%;
+  height: 100%;
+  background-color: rgb(6, 222, 53);
+}
+#article-message > div:nth-of-type(3) > h4 {
+  font-size: 0.95rem;
+}
+#article-message > div:nth-of-type(3):hover {
+  background-color: var(--rtc-color-1);
+}

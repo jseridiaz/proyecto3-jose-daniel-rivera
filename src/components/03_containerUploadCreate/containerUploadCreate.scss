@@ -1,0 +1,108 @@
+.absolute-real {
+  position: absolute;
+}
+@mixin small-info-box($bgcolor, $height, $width) {
+  background-color: $bgcolor;
+  top: 12.6%;
+  right: 0%;
+  z-index: 10;
+  overflow-y: scroll;
+  width: $width;
+  border-radius: 14px;
+  height: $height;
+  padding-bottom: 0px var(--rtc-padding-s);
+  box-shadow: 0px 0px 10px -2px black;
+}
+
+#uploads-container::-webkit-scrollbar {
+  width: 10px;
+}
+#uploads-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#uploads-container::-webkit-scrollbar-thumb {
+  background: var(--rtc-color-2);
+  transition: all 0.2s ease;
+}
+#uploads-container::-webkit-scrollbar-thumb:hover {
+  background: var(--rtc-color-3);
+}
+#uploads-container {
+  @include small-info-box(whitesmoke, 87%, 375px);
+}
+#uploads-container > h2 {
+  font-size: 1rem;
+  z-index: 2;
+  position: sticky;
+  padding: var(--rtc-padding-s) var(--rtc-padding-xs);
+  background-color: white;
+  text-align: center;
+  font-weight: 500;
+  top: 0.1px;
+  height: 10%;
+}
+#uploads-container > section {
+  position: relative;
+  height: 40%;
+  margin: var(--rtc-margin-xs) 5px;
+  padding: var(--rtc-padding-xs);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rtc-gap-xs);
+  transition: all 0.3s ease-out;
+  border-radius: 14px;
+}
+#uploads-container > section:hover {
+  cursor: pointer;
+  background-color: var(--rtc-color-2);
+}
+
+#uploads-container > section > h3 {
+  width: 100%;
+  align-self: flex-end;
+  font-size: 0.9rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#uploads-container > section:nth-child(odd) > h3 {
+  opacity: 0.7;
+  font-weight: 500;
+}
+.time {
+  opacity: 0.5;
+}
+.display {
+  display: none;
+}
+.div-img {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+#uploads-container > section > div > img {
+  border-radius: 14px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#uploads-container > section:hover > button {
+  display: block;
+}
+#uploads-container > section > button {
+  width: 20px;
+  height: 20px;
+  right: 0%;
+  bottom: -4%;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--rtc-color-1);
+}
+#uploads-container > section > button:hover {
+  background-color: var(--rtc-color-2);
+}
+#uploads-container > section > button > img {
+  width: 50%;
+  height: 50%;
+}

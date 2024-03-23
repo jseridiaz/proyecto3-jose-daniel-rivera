@@ -1,0 +1,110 @@
+#header-container > button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  padding: var(--rtc-padding-xs);
+  border-radius: 50%;
+  background-color: white;
+  img {
+    opacity: 0.5;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#header-container > button:first-of-type > img {
+  width: 56px;
+}
+
+#header-container > button:focus {
+  outline: 4px solid skyblue;
+  background-color: var(--rtc-color-2);
+}
+#header-container > button:hover {
+  background-color: var(--rtc-color-2);
+}
+
+#header-container > a {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+#header-container > a:hover {
+  background-color: var(--rtc-color-1);
+  outline: none;
+}
+
+#header-container > a > span {
+  font-weight: 600;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--rtc-color-1);
+  width: 20px;
+  height: 20px;
+}
+
+#header-container > button:last-of-type {
+  width: 30px;
+  height: 30px;
+
+  img {
+    opacity: 0.5;
+
+    width: 14px;
+    height: 14px;
+  }
+}
+#header-container > button:last-of-type:hover {
+  background-color: var(--rtc-color-1);
+}
+#btn-arrow {
+  justify-content: center;
+}
+@media screen and (max-width: 750px) {
+  #header-container > a {
+    width: 35px;
+    height: 35px;
+  }
+  #header-container > a > span {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #header-container > button {
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+
+    img {
+      width: 19px;
+      height: 19px;
+    }
+  }
+  header-container > button:last-of-type {
+    width: 20px;
+    height: 20px;
+  }
+  #header-container > button:last-of-type img {
+    width: 12px;
+    height: 12px;
+  }
+  #header-container > button:first-of-type {
+    display: none;
+  }
+}
+@media screen and (max-width: 347px) {
+  #header-container > button:nth-of-type(2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 297px) {
+  #header-container > a {
+    display: none;
+  }
+}

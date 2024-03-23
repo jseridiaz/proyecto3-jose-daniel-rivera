@@ -1,0 +1,63 @@
+.div-input {
+  height: 50px;
+  flex-grow: 1;
+}
+.div-input > img {
+  cursor: pointer;
+}
+.div-input:has(input:focus) {
+  outline: 4px solid skyblue;
+}
+.br-radius {
+  border-radius: 24px;
+}
+
+.style-input {
+  background-color: var(--rtc-color-2);
+  border-radius: 24px;
+  border: none;
+}
+.style-input:focus {
+  outline: none;
+}
+.div-input > img {
+  padding: var(--rtc-padding-xs);
+  width: 40px;
+  height: 40px;
+}
+.div-input > input {
+  width: 100%;
+
+  color: var(--rtc-color-3);
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+.div-input > input::placeholder {
+  color: var(--rtc-color-3);
+  font-size: 0.8rem;
+}
+#Clear-cta {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  color: var(--rtc-color-2);
+  font-size: 1rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--rtc-special-color-1);
+  width: 21px;
+  height: 21px;
+}
+#Cl-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--rtc-padding-xs);
+
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+#Cl-container:has(#Clear-cta:hover) {
+  background: var(--rtc-special-color-2);
+}
