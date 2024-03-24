@@ -93,10 +93,12 @@ ul > li:not(li:first-child) > a:focus {
 }
 .style-footer > ul:nth-of-type(2) {
   display: flex;
-  justify-content: space-between;
-  gap: var(--rtc-gap-xs);
+  justify-content: start;
+  flex-wrap: wrap;
+  column-gap: var(--rtc-gap-m);
   li {
     width: fit-content;
+    height: fit-content;
   }
 }
 .style-footer > ul:nth-of-type(3) {

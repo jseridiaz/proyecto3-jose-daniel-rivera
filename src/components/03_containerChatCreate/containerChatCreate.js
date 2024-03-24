@@ -19,12 +19,12 @@ export let containerChatCreate = (title, toAppend) => {
   divInput.id = 'container-input'
   imgSearch.src =
     'https://res.cloudinary.com/ddybbosdk/image/upload/v1702770668/dfclvztsz4dxdrzhha4a.webp'
-  inputSearch.placeholder = 'Look for name or email '
+  inputSearch.placeholder = 'Suche nach Name oder E-Mail '
   inputSearch.type = 'search'
   divNewMessage.id = 'container-new-message'
   imgNewMessege.src =
     '../assets/external-link-icon-user-will-260nw-1564620319.webp'
-  h4.textContent = 'New message'
+  h4.textContent = 'Neue Nachricht'
   divFirstLine.append(h2, img)
   divInput.append(imgSearch, inputSearch)
   divNewMessage.append(imgNewMessege, h4)

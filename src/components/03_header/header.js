@@ -17,7 +17,7 @@ export const iI = () => {
 
   let Di = functionInput(
     'https://res.cloudinary.com/ddybbosdk/image/upload/v1702770668/dfclvztsz4dxdrzhha4a.webp',
-    'Buscar'
+    'Suchen'
   )
   aH.appendChild(Di)
 }
@@ -31,7 +31,7 @@ export const iB = () => {
     '',
     'https://icons.veryicon.com/png/o/miscellaneous/ionicons-1/ios-notifications-5.png',
     'btn-notification',
-    'Notifications'
+    'Benachrigtungen'
   )
   let Ba = btnC(
     '',
@@ -39,16 +39,17 @@ export const iB = () => {
     '',
     'https://cdn-icons-png.flaticon.com/512/25/25355.png',
     'btn-comments',
-    'Chat'
+    'Nachrichten'
   )
   let Ai = aCreateFunction('', '', 'black', '#', '', 'J')
+  Ai.title = 'Dein Profil'
   let Bo = btnC(
     '',
     '',
     '',
     'https://cdn-icons-png.flaticon.com/512/25/25610.png',
     'btn-arrow',
-    'More'
+    'Konto und mehr Optionen'
   )
   arr.push(Bi, Ba, Ai, Bo)
 

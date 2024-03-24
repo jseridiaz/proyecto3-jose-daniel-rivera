@@ -13,10 +13,14 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
         original.then((res) => functionGalleryCreate(res, parentNode))
       } else {
         fetch(
-          `https://api.unsplash.com/search/photos?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&query=${query}`
+          `https://api.unsplash.com/search/photos?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&per_page=30&query=${query}`
         )
           .then((res) => res.json())
           .then((res) => res.results)
+          .then((res) => {
+            console.log(res)
+            return res
+          })
           .then((res) => {
             if (!res || res == []) {
               parentNode.innerHTML = `<div class= flex-container no-exist> En estos momentos no hemos podido encontrar las imagenes pedidas. Puedes volver a intentarlo más tarde </div>`
@@ -36,6 +40,10 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
         `https://api.unsplash.com/search/photos?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&query=${query}`
       )
         .then((res) => res.json())
+        .then((res) => {
+          console.log(res)
+          return res
+        })
         .then((res) => res.results)
         .then((res) => functionGalleryCreate(res, parentNode))
       divNew.classList.add('display')

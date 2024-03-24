@@ -2,7 +2,7 @@ import './style.scss'
 import { iH, iI, iB } from './src/components/03_header/header'
 import { functionGalleryCreate } from './src/components/04_gallery/gallery'
 import { Cls, containerF } from './src/components/03_inputSearch/input'
-import { searchF, funProf } from './src/components/03_searchFuction/searchF'
+import { searchF, funProf } from './src/components/04_searchFuction/searchF'
 import {
   news,
   containerUploadCreate,
@@ -37,21 +37,31 @@ Mi.classList.add('flex-container')
 
 const mP = async () => {
   const arrayP = await fetch(
-    'https://api.unsplash.com/photos/random?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1&count=30'
+    'https://api.unsplash.com/photos/random?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1&count=40'
   )
   const arrayp = await arrayP.json()
+  functionGalleryCreate(arrayp, Mi)
   return arrayp
 }
-
-let Print = () => {
-  mP().then((res) => {
+let PrintedArray = mP()
+fetch(
+  'https://api.unsplash.com/collections?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1'
+)
+  .then((res) => res.json())
+  .then((res) => {
     console.log(res)
-    functionGalleryCreate(res, Mi)
     return res
   })
-}
+  .then((res) => functionGalleryCreate(res, Mi))
+// let Print = () => {
+//   mP().then((res) => {
+//     console.log(res)
+//     functionGalleryCreate(res, Mi)
+//     return res
+//   })
+// }
 
-Print()
+// Print()
 
 const In = document.querySelector('input')
 const Di = document.querySelector('.div-input')
@@ -59,12 +69,12 @@ const dIM = document.querySelector('.div-input>img')
 let Fa = document.createElement('article')
 In.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
-    searchF(Mi, 'input', e, mP(), Fa)
+    searchF(Mi, 'input', e, PrintedArray, Fa)
   }
 })
 
 dIM.addEventListener('click', (e) =>
-  searchF(Mi, '.div-input > img', e, mP(), Fa)
+  searchF(Mi, '.div-input > img', e, PrintedArray, Fa)
 )
 
 let Cc = Cls(In, Di, Fa)
@@ -80,8 +90,8 @@ news
 nla
 nln
 list
-containerChatCreate('Inbox', H)
-containerUploadCreate(H, 'Uploads', news)
+containerChatCreate('Posteingang', H)
+containerUploadCreate(H, 'Neugkeiten', news)
 ShowHeaderContainer(
   '#uploads-container',
   '#btn-notification',

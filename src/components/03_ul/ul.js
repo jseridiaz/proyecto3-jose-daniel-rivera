@@ -10,9 +10,14 @@ const Lc = aCreateFunction(
 )
 const L2 = aCreateFunction('Home', '', '', '', '', '', 'btn-home')
 L2.classList.add('black-w')
-const l3 = aCreateFunction('Explore', '', '', 'https://www.pinterest.es/today/')
+const l3 = aCreateFunction(
+  'Entdecken',
+  '',
+  '',
+  'https://www.pinterest.es/today/'
+)
 const l4 = aCreateFunction(
-  'Create',
+  'Erstellen',
   '',
   '',
   'https://www.pinterest.es/pin-creation-tool/',

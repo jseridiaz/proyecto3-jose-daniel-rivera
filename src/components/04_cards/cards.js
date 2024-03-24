@@ -21,7 +21,7 @@ export const cardsFunction = (imgUrl = '') => {
     sD.appendChild(a)
   }
 
-  let btnS = btnC('Guardar', '', 'white', '', '')
+  let btnS = btnC('Speichern', '', 'white', '', '')
   btnS.classList.add('container-save-card')
   btnS.style.position = 'absolute'
 

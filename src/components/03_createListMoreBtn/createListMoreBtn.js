@@ -2,54 +2,54 @@ import './createListMoreBtn.scss'
 
 export let list = [
   {
-    title: 'Your accounts',
+    title: 'Deine Konten',
     parraf: [
-      { link: 'Add accounts', url: 'https://www.pinterest.es/add-account' },
+      { link: 'Konto hinzufügen', url: 'https://www.pinterest.es/add-account' },
       {
-        link: 'Covert to business',
+        link: 'In Unternehmenskonto umwandeln',
         url: 'https://www.pinterest.es/convert-business/'
       }
     ]
   },
   {
-    title: 'More options',
+    title: 'Weitere Optionen',
     parraf: [
       {
-        link: 'Reports and Violations Center',
+        link: 'Portal für Meldungen und Verstöße',
         url: 'https://www.pinterest.es/reports-and-violations'
       },
-      { link: 'Settings', url: 'https://www.pinterest.es/settings/' },
+      { link: 'Einstellung', url: 'https://www.pinterest.es/settings/' },
       {
-        link: 'Tune your home feed',
+        link: 'Homefeed anpassen',
         url: 'https://www.pinterest.es/edit/history'
       },
-      { link: 'Install the Windows App', url: '#' },
+      { link: 'Windowns-App installieren', url: '#' },
       {
-        link: 'Your privacity rigths',
+        link: 'Deine Datenschutzrechte',
         url: 'https://www.pinterest.es/settings/privacy/'
       },
       {
-        link: 'get help',
+        link: 'Hilfe anfordern',
         img: '../assets/external-link-icon-user-will-260nw-1564620319.webp',
         url: 'https://help.pinterest.com/en-gb?source=gear_menu_web'
       },
       {
-        link: 'See terms of service',
+        link: 'AGB Anzeigen',
         img: '../assets/external-link-icon-user-will-260nw-1564620319.webp',
         url: 'https://policy.pinterest.com/en-gb/terms-of-service'
       },
       {
-        link: 'see Privacity policy',
+        link: 'Datenschutzrichtlinien anzeigen',
         img: '../assets/external-link-icon-user-will-260nw-1564620319.webp',
         url: 'https://policy.pinterest.com/en-gb/privacy-policy'
       },
       {
-        link: 'Be a beta tester',
+        link: 'Beta-Tester werden',
         img: '../assets/external-link-icon-user-will-260nw-1564620319.webp',
         url: 'https://www.pinterest.es/public-beta/'
       },
       {
-        link: 'Log out',
+        link: 'Abmelden',
         img: '../assets/external-link-icon-user-will-260nw-1564620319.webp',
         url: '#'
       }
@@ -69,11 +69,11 @@ export const createListMoreBtn = (array) => {
 
   check.src =
     'https://static-00.iconduck.com/assets.00/checkmark-icon-512x426-8re0u9li.png'
-  email.textContent = 'Your email'
-  spanInfo.textContent = 'Personal'
-  p.textContent = 'Your Name'
+  email.textContent = 'Dein E-Mail'
+  spanInfo.textContent = 'Privat'
+  p.textContent = 'Dein vollständiger Name'
   span.textContent = 'J'
-  h2.textContent = 'Currently in'
+  h2.textContent = 'Aktuell in'
   firstSection.id = 'first-info-profile-section'
   divProfil.id = 'profile-div-section'
   mainArticle.id = 'main-article-more-info'

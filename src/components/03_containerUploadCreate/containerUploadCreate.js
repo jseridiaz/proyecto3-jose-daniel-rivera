@@ -3,17 +3,17 @@ import './containerUploadCreate.scss'
 
 export let nla = [
   {
-    category: 'Batman images',
+    category: 'Bilder von Batman',
     img: 'https://i.pinimg.com/236x/82/27/3f/82273fdb5b717d15420b4263bcf1faa4.jpg'
   },
   {
-    category: 'Old Comics',
+    category: 'Alte Comics',
     img: 'https://i.pinimg.com/236x/d7/96/97/d796972dc53b182a542a7c4809bda601.jpg'
   }
 ]
 export let nln = [
   {
-    category: 'Tatoos for men',
+    category: 'Tattoos für Männer',
     img: 'https://i.pinimg.com/236x/52/64/89/5264899c3b1a1f1bf1f92499c601a8db.jpg'
   },
   {
@@ -31,7 +31,7 @@ export let nln = [
 ]
 export let news = [
   {
-    title: 'Background for your phone',
+    title: 'Hintergrund für dein Handy',
     img: [
       'https://i.pinimg.com/236x/c4/0c/85/c40c85d6fdec9edef76cfe7da19379f5.jpg',
       'https://i.pinimg.com/236x/a6/e2/1f/a6e21f068d539ac5e1772278645edc7a.jpg',
@@ -40,7 +40,7 @@ export let news = [
     time: '11h'
   },
   {
-    title: 'Try out for searching more ideas to inspire you',
+    title: 'Versuch du, mehr Idees zu finden, die dir inspirieren lassen',
     img: [
       'https://i.pinimg.com/236x/8f/83/e1/8f83e1606a203f3b6817e67ec50127ed.jpg',
       'https://i.pinimg.com/236x/2f/1c/4c/2f1c4c350178a31467be58bd2d96f8bb.jpg',
@@ -50,7 +50,7 @@ export let news = [
     time: '3h'
   },
   {
-    title: 'You looked these Pins',
+    title: 'Weil du diese Pins gesehen hast',
     img: [
       'https://i.pinimg.com/236x/ab/e4/6d/abe46df15514658ab6c6571a989651d2.jpg',
       'https://i.pinimg.com/236x/c0/aa/18/c0aa18b13a5aebe380ee2730cd4fa796.jpg',

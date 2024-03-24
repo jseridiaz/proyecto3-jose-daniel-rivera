@@ -21,9 +21,9 @@
   background: var(--rtc-color-3);
 }
 #article-message > div:first-of-type {
-  justify-content: space-around;
+  justify-content: space-between;
   gap: var(--rtc-gap-l);
-  padding: 5px;
+  padding: 5px var(--rtc-padding-s);
   img {
     width: 25px;
     height: 25px;

@@ -10,43 +10,47 @@ export const footerBtn = (parentNode, title) => {
 }
 let fList = [
   {
-    name: 'Visita al Centro de Asistencia',
+    name: 'Hilfe Center besuchen',
     img: 'assets/external-link-icon-user-will-260nw-1564620319.webp',
     URL: 'https://help.pinterest.com/es?source=gear_menu_web'
   },
   {
-    name: 'Crear Widget',
+    name: 'Widget erstellen',
     img: './assets/external-link-icon-user-will-260nw-1564620319.webp',
     URL: 'https://developers.pinterest.com/docs/add-ons/about-addons/'
   }
 ]
 let sList = [
   {
-    name: 'info',
+    name: 'Kurzinfo',
     URL: 'https://help.pinterest.com/es/guide/all-about-pinterest'
   },
   { name: 'Blog', URL: 'https://newsroom.pinterest.com/es/' },
-  { name: 'Empresa', URL: 'https://business.pinterest.com/es/' }
+  { name: 'Unternehmen', URL: 'https://business.pinterest.com/es/' }
 ]
 let tList = [
-  { name: 'Empleos', URL: 'https://www.pinterestcareers.com/en/' },
-  { name: 'Desarrolladores', URL: 'https://developers.pinterest.com/' },
-  { name: 'Eliminaciones', URL: 'https://policy.pinterest.com/es/copyright' },
+  { name: 'Arbeit bei uns', URL: 'https://www.pinterestcareers.com/en/' },
+  { name: 'Entwickler', URL: 'https://developers.pinterest.com/' },
+  { name: 'Entfernen', URL: 'https://policy.pinterest.com/es/copyright' },
   {
-    name: 'Política de privacidad',
+    name: 'Datenschutz',
     URL: 'https://help.pinterest.com/es/guide/all-about-pinterest'
   },
   {
-    name: 'Anuncios personalizados',
+    name: 'personalizierte Anzeigen ',
     URL: 'https://help.pinterest.com/es/article/personalized-ads-on-pinterest'
   },
   {
-    name: 'Tus derechos de privacidad',
+    name: 'Deine Datenschutzlinie',
     URL: 'https://www.pinterest.es/settings/privacy/'
   },
   {
-    name: 'Condicion',
+    name: 'Bedingungen',
     URL: 'https://policy.pinterest.com/es/terms-of-service'
+  },
+  {
+    name: 'Impressum',
+    URL: 'https://policy.pinterest.com/de/impressum'
   }
 ]
 
