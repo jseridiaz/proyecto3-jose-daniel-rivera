@@ -95,6 +95,7 @@ main {
   gap: var(--rtc-gap-xs);
   justify-content: center;
   padding: var(--rtc-padding-s);
+  align-content: flex-start;
 }
 #recomended-target {
   top: 11%;

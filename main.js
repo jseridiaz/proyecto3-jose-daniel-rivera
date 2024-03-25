@@ -41,22 +41,22 @@ const mP = async () => {
   )
   const arrayp = await arrayP.json()
 
-  functionGalleryCreate(arrayp, Mi, 'element.urls.regular')
+  functionGalleryCreate(arrayp, Mi)
   return arrayp
 }
 let PrintedArray = mP()
-fetch(
-  'https://api.unsplash.com/collections/200/related?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1'
-)
-  .then((res) => res.json())
-  .then((res) =>
-    functionGalleryCreate(
-      res,
-      Mi,
-      'cover_photo',
-      'element.cover_photos.urls.regular'
-    )
-  )
+// fetch(
+//   'https://api.unsplash.com/collections/200/related?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1'
+// )
+//   .then((res) => res.json())
+//   .then((res) =>
+//     functionGalleryCreate(
+//       res,
+//       Mi,
+//       'cover_photo',
+//       'element.cover_photos.urls.regular'
+//     )
+//   )
 
 const In = document.querySelector('input')
 const Di = document.querySelector('.div-input')

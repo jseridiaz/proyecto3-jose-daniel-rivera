@@ -2,10 +2,10 @@ import { cardsFunction } from '../04_cards/cards'
 
 import { aPF, footerBtn } from '../06_footer/footer'
 
-export let functionGalleryCreate = (array, parentNode, link) => {
+export let functionGalleryCreate = (array, parentNode) => {
   parentNode.innerHTML = ''
   for (const element of array) {
-    let Cc = cardsFunction(`${link}`)
+    let Cc = cardsFunction(element.urls.regular)
     parentNode.appendChild(Cc)
   }
   let bt = footerBtn(parentNode, 'Mehr')
