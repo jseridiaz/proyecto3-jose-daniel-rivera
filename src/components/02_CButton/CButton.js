@@ -50,7 +50,6 @@ export const changeColorButtons = (selector) => {
 
   for (let i = 0; i < readButtonsHeader.length; i++) {
     const element = readButtonsHeader[i]
-    console.log(element)
 
     element.addEventListener('click', (e) => {
       if (e.target && e.target.tagName === 'BUTTON') {

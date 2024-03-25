@@ -49,16 +49,16 @@ body {
 
 :root {
   /* FONTS */
-  --rtc-primary-font: "Work Sans", sans-serif;
+  --rtc-primary-font: 'Work Sans', sans-serif;
   /* BRANDING COLORS */
-  --rtc-color-1: #f9faff;
-  --rtc-color-2: #b6b6b6;
+  --rtc-color-1: #f0f0f0;
+  --rtc-color-2: #cac6c6;
   --rtc-color-3: #4a4a4a;
-  --rtc-color-4: #003f62;
-  --rtc-special-color-1: #a3fcb1;
-  --rtc-special-color-2: #fcc3a3;
+  --rtc-color-4: #e62020;
+  --rtc-special-color-1: #000000;
+  --rtc-special-color-2: #9d9c9b;
   --rtc-special-color-3: #a3f7fc;
-  --rtc-special-color-4: #fca3a3;
+  --rtc-special-color-4: #af0202;
   --rtc-special-color-5: #f5e6ff;
   --rtc-special-color-6: #7be498;
   --rtc-special-color-7: #f7c29b;

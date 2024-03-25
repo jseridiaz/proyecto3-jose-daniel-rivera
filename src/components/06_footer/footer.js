@@ -37,7 +37,7 @@ let tList = [
     URL: 'https://help.pinterest.com/es/guide/all-about-pinterest'
   },
   {
-    name: 'personalizierte Anzeigen ',
+    name: 'Personalizierte Anzeigen ',
     URL: 'https://help.pinterest.com/es/article/personalized-ads-on-pinterest'
   },
   {

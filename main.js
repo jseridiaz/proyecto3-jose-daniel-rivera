@@ -45,6 +45,7 @@ const mP = async () => {
   return arrayp
 }
 let PrintedArray = mP()
+
 // fetch(
 //   'https://api.unsplash.com/collections/200/related?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1'
 // )
@@ -100,7 +101,7 @@ ShowHeaderContainer(
 H.appendChild(Fa)
 changeColorButtons('header>#header-container>button', 'full-img')
 let sectionMore = createListMoreBtn(list)
-console.log(sectionMore)
+
 H.appendChild(sectionMore)
 ShowHeaderContainer(
   '#main-article-more-info',

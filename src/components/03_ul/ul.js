@@ -54,7 +54,6 @@ let removeDisplay = (element) => {
 }
 export const changCol = ({ selector, classToAdd, classToRemove }) => {
   const read = document.querySelectorAll(selector)
-  console.log(read)
 
   for (let i = 0; i < read.length; i++) {
     const element = read[i]

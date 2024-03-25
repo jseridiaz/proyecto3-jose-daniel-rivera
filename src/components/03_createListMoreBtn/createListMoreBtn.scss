@@ -32,7 +32,7 @@
   display: flex;
   gap: var(--rtc-gap-xs);
   padding: 0 var(--rtc-padding-xs);
-  height: 80px;
+  height: fit-content;
   align-items: center;
   justify-content: space-between;
   border-radius: 14px;
