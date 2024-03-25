@@ -40,28 +40,23 @@ const mP = async () => {
     'https://api.unsplash.com/photos/random?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1&count=40'
   )
   const arrayp = await arrayP.json()
-  functionGalleryCreate(arrayp, Mi)
+
+  functionGalleryCreate(arrayp, Mi, 'element.urls.regular')
   return arrayp
 }
 let PrintedArray = mP()
 fetch(
-  'https://api.unsplash.com/collections?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1'
+  'https://api.unsplash.com/collections/200/related?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1'
 )
   .then((res) => res.json())
-  .then((res) => {
-    console.log(res)
-    return res
-  })
-  .then((res) => functionGalleryCreate(res, Mi))
-// let Print = () => {
-//   mP().then((res) => {
-//     console.log(res)
-//     functionGalleryCreate(res, Mi)
-//     return res
-//   })
-// }
-
-// Print()
+  .then((res) =>
+    functionGalleryCreate(
+      res,
+      Mi,
+      'cover_photo',
+      'element.cover_photos.urls.regular'
+    )
+  )
 
 const In = document.querySelector('input')
 const Di = document.querySelector('.div-input')
