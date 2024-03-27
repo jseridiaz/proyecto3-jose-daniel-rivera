@@ -23,9 +23,6 @@ export const cardsFunction = (imgUrl = '') => {
 
   let btnS = btnC('Speichern', '', 'white', '', '')
   btnS.classList.add('container-save-card')
-  if (btnS.classList.contains('flex-container')) {
-    btnS.classList.remove('flex-container')
-  }
   btnS.style.position = 'absolute'
 
   let btnD = btnC(
@@ -63,5 +60,6 @@ export const cardsFunction = (imgUrl = '') => {
     btnD.classList.toggle('block')
     btnM.classList.toggle('block')
   })
+
   return Fd
 }
