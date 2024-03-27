@@ -13,7 +13,9 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
         original.then((res) => functionGalleryCreate(res, parentNode))
       } else {
         fetch(
-          `https://api.unsplash.com/search/photos?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&per_page=30&query=${query}`
+          `https://api.unsplash.com/search/photos?client_id=${
+            import.meta.env.VITE_SECRET_KEY
+          }&per_page=30&query=${query}`
         )
           .then((res) => res.json())
           .then((res) => res.results)

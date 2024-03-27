@@ -37,7 +37,9 @@ Mi.classList.add('flex-container')
 
 const mP = async () => {
   const arrayP = await fetch(
-    `https://api.unsplash.com/photos/random?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1&count=40`
+    `https://api.unsplash.com/photos/random?client_id=${
+      import.meta.env.VITE_SECRET_KEY
+    }&Accept-Version=1&count=40`
   )
   const arrayp = await arrayP.json()
 
