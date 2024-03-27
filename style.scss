@@ -1,7 +1,12 @@
 @use './src/components/01_aButton/aButton.scss';
-
+@use './src/components/02_CButton/CButton.scss';
 @use './src/components/03_ul/ul.scss';
 @use './src/components/03_header/header.scss';
+@use './src/components/03_containerChatCreate/containerChatCreate.scss';
+@use './src/components/03_createListMoreBtn/createListMoreBtn.scss';
+@use './src/components/03_inputSearch/input.scss';
+@use './src/components/04_cards/cards.scss';
+@use './src/components/06_footer/footer.scss';
 
 body {
   background-color: rgb(255, 255, 255);

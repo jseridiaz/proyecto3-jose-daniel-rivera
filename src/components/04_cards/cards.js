@@ -23,6 +23,9 @@ export const cardsFunction = (imgUrl = '') => {
 
   let btnS = btnC('Speichern', '', 'white', '', '')
   btnS.classList.add('container-save-card')
+  if (btnS.classList.contains('flex-container')) {
+    btnS.classList.remove('flex-container')
+  }
   btnS.style.position = 'absolute'
 
   let btnD = btnC(
