@@ -17,7 +17,6 @@ import {
   createListMoreBtn,
   list
 } from './src/components/03_createListMoreBtn/createListMoreBtn'
-require('dotenv').config()
 
 // *Lectura del container del header
 let H = document.querySelector('header')
@@ -38,7 +37,7 @@ Mi.classList.add('flex-container')
 
 const mP = async () => {
   const arrayP = await fetch(
-    `https://api.unsplash.com/photos/random?client_id=${process.env.SECRET_KEY}&Accept-Version=1&count=40`
+    `https://api.unsplash.com/photos/random?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1&count=40`
   )
   const arrayp = await arrayP.json()
 
