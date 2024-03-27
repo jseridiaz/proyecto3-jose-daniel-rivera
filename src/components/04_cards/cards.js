@@ -24,6 +24,7 @@ export const cardsFunction = (imgUrl = '') => {
   let btnS = btnC('Speichern', '', 'white', '', '')
   btnS.classList.add('container-save-card')
   btnS.style.position = 'absolute'
+  btnS.classList.remove('flex-container')
 
   let btnD = btnC(
     '',
@@ -34,6 +35,7 @@ export const cardsFunction = (imgUrl = '') => {
   )
   btnD.classList.add('container-dowload', 'rounded')
   btnD.style.position = 'absolute'
+  btnD.classList.remove('flex-container')
 
   let btnM = btnC(
     '',
@@ -44,6 +46,7 @@ export const cardsFunction = (imgUrl = '') => {
   )
   btnM.classList.add('container-see-more', 'rounded')
   btnM.style.position = 'absolute'
+  btnM.classList.remove('flex-container')
 
   sD.appendChild(btnS)
   sD.appendChild(btnD)

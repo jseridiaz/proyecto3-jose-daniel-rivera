@@ -14,7 +14,7 @@ export const btnC = (
   bt.style.background = bgColor
   bt.style.color = colorText
   bt.className = 'br-radius'
-
+  bt.className = 'flex-container'
   bt.id = idS
   bt.title = title
 
