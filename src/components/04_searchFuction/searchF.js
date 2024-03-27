@@ -20,7 +20,6 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
           .then((res) => res.json())
           .then((res) => res.results)
           .then((res) => {
-            console.log(res)
             return res
           })
           .then((res) => {
