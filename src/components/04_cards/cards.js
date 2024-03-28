@@ -1,10 +1,12 @@
 import { btnC } from '../02_CButton/CButton'
 import './cards.scss'
-export const cardsFunction = (imgUrl = '') => {
+export const cardsFunction = (imgUrl = '', usuario, instagram, description) => {
   let Fd = document.createElement('article')
   let sD = document.createElement('div')
   let a = document.createElement('a')
   let p = document.createElement('img')
+  let divInfoLeft = document.createElement('div')
+  let divInfoRight = document.createElement('div')
 
   a.href = imgUrl
   a.target = '_blank'
@@ -12,6 +14,19 @@ export const cardsFunction = (imgUrl = '') => {
   Fd.classList.add('main-div-card')
   Fd.style.position = 'relative'
   sD.classList.add('single-div-img')
+  divInfoLeft.classList.add('info-div-left', 'absolute-real', 'reduced')
+  divInfoRight.classList.add('info-div-right', 'absolute-real', 'reduced')
+
+  divInfoLeft.innerHTML = `<h4 class="nameUser" >${usuario}</h4> <h5 class="instagram"><img src="https://img.freepik.com/vektoren-premium/instagram-beliebtes-social-media-symbol-nur-redaktioneller-beitrag-kiew-ukraine-3-dezember-2019_944081-64.jpg" >${instagram}</h5>`
+  divInfoRight.innerHTML = `<p class="decription-paragraph">${description.replaceAll(
+    '-',
+    ' '
+  )}</p>`
+
+  aleatorietyColor(divInfoLeft)
+  aleatorietyColor(divInfoRight)
+
+  animationDivsCards(divInfoLeft, divInfoRight, sD)
   if (imgUrl !== '') {
     p.src = imgUrl
 
@@ -47,10 +62,8 @@ export const cardsFunction = (imgUrl = '') => {
   btnM.classList.add('container-see-more', 'rounded')
   btnM.style.position = 'absolute'
   btnM.classList.remove('flex-container')
+  sD.append(divInfoLeft, divInfoRight, btnS, btnD, btnM)
 
-  sD.appendChild(btnS)
-  sD.appendChild(btnD)
-  sD.appendChild(btnM)
   Fd.appendChild(sD)
 
   Fd.addEventListener('mouseover', (e) => {
@@ -65,4 +78,54 @@ export const cardsFunction = (imgUrl = '') => {
   })
 
   return Fd
+}
+
+const animationDivsCards = (divleft, divright, container) => {
+  container.addEventListener('mouseover', (e) => {
+    divleft.classList.toggle('explained')
+    divright.classList.toggle('explained')
+    divleft.classList.toggle('reduced')
+    divright.classList.toggle('reduced')
+
+    changeColorRight(divright)
+    changeColorLeft(divleft)
+
+    if (divleft.childNodes[2].childNodes[1].data == null) {
+      console.log('no')
+    }
+  })
+  container.addEventListener('mouseout', (e) => {
+    divleft.classList.toggle('explained')
+    divright.classList.toggle('explained')
+    divleft.classList.toggle('reduced')
+    divright.classList.toggle('reduced')
+  })
+}
+
+const aleatorietyColor = (div) => {
+  const color = Math.ceil(Math.random() * 11)
+
+  div.style.backgroundColor = `var(--rtc-special-color-${color})`
+}
+
+const changeColorRight = (divright) => {
+  if (
+    divright.style.backgroundColor == 'var(--rtc-special-color-1)' ||
+    divright.style.backgroundColor == 'var(--rtc-special-color-4)' ||
+    divright.style.backgroundColor == 'var(--rtc-special-color-11)'
+  ) {
+    divright.childNodes[0].style.color = 'white'
+  }
+}
+const changeColorLeft = (divleft) => {
+  if (
+    divleft.style.backgroundColor == 'var(--rtc-special-color-10)' ||
+    divleft.style.backgroundColor == 'var(--rtc-special-color-9)' ||
+    divleft.style.backgroundColor == 'var(--rtc-special-color-11)'
+  ) {
+    divleft.childNodes[2].style.color = 'red'
+  }
+  if (divleft.childNodes[2].childNodes[1].data === 'null') {
+    divleft.childNodes[2].childNodes[1].textContent = 'Unbestimmt'
+  }
 }

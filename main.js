@@ -42,7 +42,7 @@ const mP = async () => {
     }&Accept-Version=1&count=40`
   )
   const arrayp = await arrayP.json()
-
+  console.log(arrayp)
   functionGalleryCreate(arrayp, Mi)
   return arrayp
 }
