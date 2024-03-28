@@ -9,12 +9,9 @@ export let functionGalleryCreate = (array, parentNode) => {
       element.urls.regular,
       element.user.name,
       element.user.instagram_username,
-      element.alternative_slugs.de
+      element.alternative_slugs.de,
+      element.urls.raw
     )
-    if (element.user.name == null) {
-      let cambio = 'no defined'
-      element.user.name = cambio
-    }
 
     parentNode.appendChild(Cc)
   }

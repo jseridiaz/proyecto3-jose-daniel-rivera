@@ -1,12 +1,19 @@
 import { btnC } from '../02_CButton/CButton'
 import './cards.scss'
-export const cardsFunction = (imgUrl = '', usuario, instagram, description) => {
+export const cardsFunction = (
+  imgUrl = '',
+  usuario,
+  instagram,
+  description,
+  pictureLink
+) => {
   let Fd = document.createElement('article')
   let sD = document.createElement('div')
   let a = document.createElement('a')
   let p = document.createElement('img')
   let divInfoLeft = document.createElement('div')
   let divInfoRight = document.createElement('div')
+  let directionToPicture = document.createElement('a')
 
   a.href = imgUrl
   a.target = '_blank'
@@ -14,6 +21,10 @@ export const cardsFunction = (imgUrl = '', usuario, instagram, description) => {
   Fd.classList.add('main-div-card')
   Fd.style.position = 'relative'
   sD.classList.add('single-div-img')
+  directionToPicture.href = imgUrl
+  directionToPicture.target = '_blank'
+  directionToPicture.rel = 'noopener noreferer'
+  directionToPicture.classList.add('watch', 'absolute-real', 'rounded')
   divInfoLeft.classList.add('info-div-left', 'absolute-real', 'reduced')
   divInfoRight.classList.add('info-div-right', 'absolute-real', 'reduced')
 
@@ -62,7 +73,8 @@ export const cardsFunction = (imgUrl = '', usuario, instagram, description) => {
   btnM.classList.add('container-see-more', 'rounded')
   btnM.style.position = 'absolute'
   btnM.classList.remove('flex-container')
-  sD.append(divInfoLeft, divInfoRight, btnS, btnD, btnM)
+  directionToPicture.appendChild(btnD)
+  sD.append(divInfoLeft, divInfoRight, btnS, directionToPicture, btnM)
 
   Fd.appendChild(sD)
 

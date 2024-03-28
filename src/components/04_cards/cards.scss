@@ -153,3 +153,21 @@
   height: 30px;
   object-fit: cover;
 }
+.info-div-left > h5:hover {
+  font-weight: 800;
+  animation: rotation 2s linear;
+}
+@keyframes rotation {
+  20% {
+    transform: rotateX(10deg 'angle');
+  }
+}
+.watch {
+  width: 35px;
+  height: 35px;
+
+  right: 15%;
+  bottom: 4.6%;
+  border: none;
+  padding: var(--rtc-padding-xs);
+}
