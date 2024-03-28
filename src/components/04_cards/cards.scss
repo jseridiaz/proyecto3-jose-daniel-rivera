@@ -101,6 +101,7 @@
   border-radius: 24px;
   opacity: 0.7;
 }
+
 .info-div-right {
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
   bottom: 0;
@@ -154,12 +155,15 @@
   object-fit: cover;
 }
 .info-div-left > h5:hover {
+  animation: ass 1s ease 1s;
   font-weight: 800;
-  animation: rotation 2s linear;
 }
-@keyframes rotation {
+@keyframes ass {
   20% {
-    transform: rotateX(10deg 'angle');
+    transform: rotateY(100deg);
+  }
+  80% {
+    transform: rotateY(-20deg);
   }
 }
 .watch {

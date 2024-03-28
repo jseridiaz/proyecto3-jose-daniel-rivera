@@ -90,11 +90,65 @@ let US = dF(sList)
 let UT = dF(tList)
 
 export const aPF = (parentNode) => {
-  let foot = document.createElement('footer')
+  let foot = document.createElement('section')
   foot.classList.add('display', 'style-footer')
   foot.appendChild(UF)
   foot.appendChild(US)
   foot.appendChild(UT)
   parentNode.appendChild(foot)
+
   return foot
+}
+
+export const lastDivInformation = () => {
+  const arrayRss = [
+    {
+      img: 'https://www.svgrepo.com/show/354000/linkedin-icon.svg',
+      url: 'https://www.linkedin.com/in/josedanielriveradiaz/',
+      rrss: 'Linkedin'
+    },
+    {
+      img: 'https://www.svgrepo.com/show/486263/developer-centerpublic-api.svg',
+      url: '#',
+      rrss: 'Portafolio'
+    },
+    {
+      img: 'https://www.svgrepo.com/show/512317/github-142.svg',
+      url: 'https://github.com/jseridiaz',
+      rrss: 'gitHub'
+    }
+  ]
+
+  const footerContainer = document.createElement('footer')
+  const article = document.createElement('article')
+  const divContact = document.createElement('div')
+  const divCopy = document.createElement('div')
+  const divRrss = document.createElement('div')
+  const Ul = document.createElement('ul')
+
+  footerContainer.id = 'footer-container'
+  article.classList.add('flex-container')
+  article.id = 'content-of-footer'
+  divContact.classList.add('contact')
+  divCopy.classList.add('copy-div')
+  divRrss.classList.add('rrss-container')
+
+  for (const item of arrayRss) {
+    const svg = document.createElement('img')
+    const li = document.createElement('li')
+    const a = document.createElement('a')
+    svg.src = item.img
+    svg.loading = 'lazy'
+    a.textContent = item.rrss
+    a.href = item.url
+    li.append(svg, a)
+    Ul.append(li)
+  }
+  divContact.innerHTML = `<img src="https://www.svgrepo.com/show/349379/gmail-old.svg" loading="lazy"><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jseridiaz@gmail.com" target="_blanket">jseridiaz@gmail.com</a>`
+  divCopy.innerHTML = `&copy All right reserved `
+  divRrss.append(Ul)
+  article.append(divRrss, divContact, divCopy)
+  footerContainer.append(article)
+
+  return footerContainer
 }

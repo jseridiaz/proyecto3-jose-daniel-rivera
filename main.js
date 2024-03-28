@@ -17,6 +17,7 @@ import {
   createListMoreBtn,
   list
 } from './src/components/03_createListMoreBtn/createListMoreBtn'
+import { lastDivInformation } from './src/components/06_footer/footer'
 
 // *Lectura del container del header
 let H = document.querySelector('header')
@@ -31,8 +32,9 @@ changCol({
 })
 
 let Mi = document.createElement('main')
-
+let footer = lastDivInformation()
 document.body.appendChild(Mi)
+document.body.appendChild(footer)
 Mi.classList.add('flex-container')
 
 const mP = async () => {

@@ -1,5 +1,4 @@
 import { cardsFunction } from '../04_cards/cards'
-
 import { aPF, footerBtn } from '../06_footer/footer'
 
 export let functionGalleryCreate = (array, parentNode) => {
@@ -9,8 +8,7 @@ export let functionGalleryCreate = (array, parentNode) => {
       element.urls.regular,
       element.user.name,
       element.user.instagram_username,
-      element.alternative_slugs.de,
-      element.urls.raw
+      element.alternative_slugs.de
     )
 
     parentNode.appendChild(Cc)
@@ -18,6 +16,7 @@ export let functionGalleryCreate = (array, parentNode) => {
 
   let bt = footerBtn(parentNode, 'Mehr')
   let foot = aPF(parentNode)
+
   bt.addEventListener('click', () => {
     foot.classList.toggle('display')
   })

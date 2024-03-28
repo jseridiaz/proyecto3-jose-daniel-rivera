@@ -1,12 +1,6 @@
 import { btnC } from '../02_CButton/CButton'
 import './cards.scss'
-export const cardsFunction = (
-  imgUrl = '',
-  usuario,
-  instagram,
-  description,
-  pictureLink
-) => {
+export const cardsFunction = (imgUrl = '', usuario, instagram, description) => {
   let Fd = document.createElement('article')
   let sD = document.createElement('div')
   let a = document.createElement('a')

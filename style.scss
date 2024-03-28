@@ -9,8 +9,10 @@
 @use './src/components/06_footer/footer.scss';
 
 body {
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(to bottom, white 20%, rgb(104, 104, 104) 80%);
+  height: fit-content;
 }
+
 .absolute {
   position: fixed;
 }
@@ -88,6 +90,7 @@ button {
   --rtc-gap-xl: 50px;
 }
 body {
+  background-color: var(--rtc-special-color-2);
   min-height: 100svh;
   font-family: var(--rtc-primary-font);
 }
@@ -190,6 +193,7 @@ main {
   #recomended-target > section:first-child {
     height: 145px;
   }
+
   #recomended-target > section:first-child > div {
     height: 78%;
   }
