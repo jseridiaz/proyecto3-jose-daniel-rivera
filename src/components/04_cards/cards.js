@@ -1,6 +1,12 @@
 import { btnC } from '../02_CButton/CButton'
 import './cards.scss'
-export const cardsFunction = (imgUrl = '', usuario, instagram, description) => {
+export const cardsFunction = (
+  imgUrl = '',
+  usuario,
+  instagram,
+  description,
+  id
+) => {
   let Fd = document.createElement('article')
   let sD = document.createElement('div')
   let a = document.createElement('a')
@@ -23,10 +29,10 @@ export const cardsFunction = (imgUrl = '', usuario, instagram, description) => {
   divInfoRight.classList.add('info-div-right', 'absolute-real', 'reduced')
 
   divInfoLeft.innerHTML = `<h4 class="nameUser" >${usuario}</h4> <h5 class="instagram"><img src="https://img.freepik.com/vektoren-premium/instagram-beliebtes-social-media-symbol-nur-redaktioneller-beitrag-kiew-ukraine-3-dezember-2019_944081-64.jpg" >${instagram}</h5>`
-  divInfoRight.innerHTML = `<p class="decription-paragraph">${description.replaceAll(
-    '-',
-    ' '
-  )}</p>`
+  const changeDescription = descriptionModificated(description, id)
+  console.log(description)
+  console.log(changeDescription)
+  divInfoRight.innerHTML = `<p class="decription-paragraph">${changeDescription}</p>`
 
   aleatorietyColor(divInfoLeft)
   aleatorietyColor(divInfoRight)
@@ -134,4 +140,18 @@ const changeColorLeft = (divleft) => {
   if (divleft.childNodes[2].childNodes[1].data === 'null') {
     divleft.childNodes[2].childNodes[1].textContent = 'Unbestimmt'
   }
+}
+
+const removeId = (selector, id) => {
+  const sentence = document.querySelector(`${selector}`)
+  if (sentence.textContent.includes(id)) {
+    sentence.textContent.replace(id, '')
+  }
+  console.log(sentence)
+}
+
+const descriptionModificated = (description, id) => {
+  let firstChangeDescription = description.replaceAll('-', ' ')
+  let lastChangeDescription = firstChangeDescription.replace(`${id}`, '')
+  return lastChangeDescription
 }

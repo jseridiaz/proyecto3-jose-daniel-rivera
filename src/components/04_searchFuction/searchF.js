@@ -38,7 +38,9 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
       original.then((res) => functionGalleryCreate(res, parentNode))
     } else {
       fetch(
-        `https://api.unsplash.com/search/photos?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&query=${query}`
+        `https://api.unsplash.com/search/photos?client_id=${
+          import.meta.env.VITE_SECRET_KEY
+        }&query=${query}`
       )
         .then((res) => res.json())
         .then((res) => {
@@ -51,7 +53,7 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
     }
   }
 }
-// function for
+
 export let funProf = (Fa, ToAppend) => {
   let In = document.querySelector('input')
   In.addEventListener('focus', () => {
@@ -79,7 +81,7 @@ export let funProf = (Fa, ToAppend) => {
       for (const element of ct) {
         element.addEventListener('click', (e) => {
           e.stopPropagation()
-          console.log(e.target.children[1].textContent)
+
           let query = e.target.children[1].textContent
           let res = aIs(ToAppend, query).then((res) =>
             Fa.classList.add('display')
@@ -97,7 +99,6 @@ export let funProf = (Fa, ToAppend) => {
       }
       for (const element of im) {
         element.addEventListener('click', (e) => {
-          console.log(e.target.nextSibling.textContent)
           let query = e.target.nextSibling.textContent
           let res = aIs(ToAppend, query).then((res) =>
             Fa.classList.add('display')
