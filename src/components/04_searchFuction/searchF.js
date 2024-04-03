@@ -13,6 +13,7 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
       if (query == '') {
         original.then((res) => functionGalleryCreate(res, parentNode))
       } else {
+        let footer = document.querySelector('#footer-container')
         fetch(
           `https://api.unsplash.com/search/photos?client_id=${
             import.meta.env.VITE_SECRET_KEY
@@ -23,10 +24,12 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
           .then((res) => {
             if (res.length > 0) {
               functionGalleryCreate(res, parentNode)
-              document
-                .querySelector('#footer-container')
-                .classList.remove('absolute-footer')
+              footer.classList.remove('absolute-footer')
+              footer.classList.remove('relative-footer')
               document.querySelector('#more-pictures').style.display = 'block'
+            } else if (res.length <= 4) {
+              footer.classList.add('relative-footer')
+              footer.classList.remove('absolute-footer')
             } else {
               parentNode.innerHTML = `<div class= "flex-container no-exist"> No se han encontrado resultados con la busqueda actual. Puedes volver a intentarlo más tarde. </div>`
               let buttonInfo = footerBtn(parentNode, 'Mehr')
@@ -35,9 +38,8 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
               buttonInfo.addEventListener('click', (e) =>
                 sectionInfo.classList.toggle('display')
               )
-              document
-                .querySelector('#footer-container')
-                .classList.add('absolute-footer')
+              footer.classList.add('absolute-footer')
+              footer.classList.remove('relative-footer')
             }
           })
 
@@ -63,6 +65,7 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
         .then((res) => {
           if (res.length > 0) {
             functionGalleryCreate(res, parentNode)
+
             document
               .querySelector('#footer-container')
               .classList.remove('absolute-footer')

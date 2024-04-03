@@ -45,6 +45,11 @@
     bottom: 32%;
   }
 }
+.absolute-footer {
+  position: absolute;
+  width: 100%;
+  top: 80.8%;
+}
 .style-footer > ul {
   height: fit-content;
   width: 200px;
@@ -137,6 +142,9 @@ footer[id='footer-container'] {
   padding: var(--rtc-padding-xs);
   height: fit-content;
   background-color: #e1c174;
+}
+footer[id='footer-container'].relative-footer {
+  top: 102;
 }
 footer[id='footer-container'] > [id='content-of-footer'] {
   height: fit-content;

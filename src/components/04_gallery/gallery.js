@@ -33,7 +33,6 @@ export let functionGalleryCreate = (array, parentNode) => {
 }
 
 const morePicturesEvent = async (counter, parentNode) => {
-  console.log(counter)
   let queryValue = document.querySelector('.style-input>input').value
   console.log(queryValue)
   if (queryValue === '') {
@@ -52,15 +51,15 @@ const morePicturesEvent = async (counter, parentNode) => {
       .then((res) => res.json())
       .catch(
         (error) =>
-          (parentNode.innerHTML = `<div class= flex-container no-exist> En estos momentos no hemos podido encontrar las imagenes pedidas. Puedes volver a intentarlo más tarde </div>`)
+          (parentNode.innerHTML = `<div class= flex-container no-exist> En estos momentos no hemos podido encontrar las imagenes pedidas. Puedes volver a intentarlo más tarde. Motivo: ${error}</div>`)
       )
       .then((res) => res.results)
 
     bucleToPrintCard(picturesRequest, parentNode)
   }
 }
-const bucleToPrintCard = (array, parentNode) => {
-  for (const element of array) {
+const bucleToPrintCard = (arrayR, parentNode) => {
+  for (const element of arrayR) {
     let Cc = cardsFunction(
       element.urls.regular,
       element.user.name,

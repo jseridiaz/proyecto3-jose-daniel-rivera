@@ -48,7 +48,10 @@ const mP = async () => {
   functionGalleryCreate(arrayp, Mi)
   return arrayp
 }
-let PrintedArray = mP().then((res) => document.body.appendChild(footer))
+let PrintedArray = mP().then((res) => {
+  document.body.appendChild(footer)
+  return res
+})
 
 const In = document.querySelector('input')
 const Di = document.querySelector('.div-input')

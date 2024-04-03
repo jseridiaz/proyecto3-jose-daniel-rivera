@@ -26,7 +26,7 @@ export let nln = [
   },
   {
     category: 'Dragon Ball',
-    img: 'https://i.pinimg.com/236x/7e/51/ea/7e51eac46a03941c7c86ab3ba976ff06.jpg'
+    img: 'https://media.vandalsports.com/i/640x360/9-2023/2023981732_1.jpg'
   }
 ]
 export let news = [
