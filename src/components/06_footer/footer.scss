@@ -36,6 +36,14 @@
   background: linear-gradient(to bottom right, #fefefe 0%, #ff3e3e 60%);
   z-index: 4;
   width: 164px;
+  animation: scroll forwards;
+  animation-timeline: scroll(root);
+  animation-range-start: 93%;
+}
+@keyframes scroll {
+  to {
+    bottom: 32%;
+  }
 }
 .style-footer > ul {
   height: fit-content;
@@ -320,20 +328,36 @@ footer[id='footer-container'] > [id='content-of-footer'] > div.copy-div {
   footer[id='footer-container'] > [id='content-of-footer'] {
     gap: var(--rtc-gap-s);
   }
-}
-
-@media screen and (max-width: 645px) {
-  footer[id='footer-container']
-    > [id='content-of-footer']
-    > div.rrss-container {
-    min-width: 170px;
-    width: 170px;
+  #footer-btn {
+    animation-range-start: 60%;
   }
-  footer[id='footer-container']
-    > [id='content-of-footer']
-    > div.rrss-container
-    > ul {
-    min-width: 170px;
-    width: 170px;
+  @keyframes scrolling {
+    to {
+      bottom: 32%;
+    }
+  }
+  .style-footer {
+    animation-range-start: 60%;
+  }
+  @keyframes scroll {
+    to {
+      bottom: 40%;
+    }
+  }
+
+  @media screen and (max-width: 645px) {
+    footer[id='footer-container']
+      > [id='content-of-footer']
+      > div.rrss-container {
+      min-width: 170px;
+      width: 170px;
+    }
+    footer[id='footer-container']
+      > [id='content-of-footer']
+      > div.rrss-container
+      > ul {
+      min-width: 170px;
+      width: 170px;
+    }
   }
 }

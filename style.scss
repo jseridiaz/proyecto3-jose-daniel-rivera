@@ -116,7 +116,7 @@ main {
   height: fit-content;
   max-height: 85svh;
   background-color: var(--rtc-color-1);
-  z-index: 1;
+  z-index: 3;
   flex-direction: column;
   border-radius: 18px;
   padding: var(--rtc-padding-s);
@@ -130,6 +130,9 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.display {
+  display: none;
 }
 #recomended-target > section:last-child {
   width: 100%;

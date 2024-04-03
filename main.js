@@ -34,7 +34,7 @@ changCol({
 let Mi = document.createElement('main')
 let footer = lastDivInformation()
 document.body.appendChild(Mi)
-document.body.appendChild(footer)
+
 Mi.classList.add('flex-container')
 
 const mP = async () => {
@@ -48,20 +48,7 @@ const mP = async () => {
   functionGalleryCreate(arrayp, Mi)
   return arrayp
 }
-let PrintedArray = mP()
-
-// fetch(
-//   'https://api.unsplash.com/collections/200/related?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1'
-// )
-//   .then((res) => res.json())
-//   .then((res) =>
-//     functionGalleryCreate(
-//       res,
-//       Mi,
-//       'cover_photo',
-//       'element.cover_photos.urls.regular'
-//     )
-//   )
+let PrintedArray = mP().then((res) => document.body.appendChild(footer))
 
 const In = document.querySelector('input')
 const Di = document.querySelector('.div-input')
@@ -72,14 +59,24 @@ In.addEventListener('keydown', (e) => {
     searchF(Mi, 'input', e, PrintedArray, Fa)
   }
 })
+// addEventListener('mousemove', (e) => console.log(e.y))
 
-dIM.addEventListener('click', (e) =>
+dIM.addEventListener('click', (e) => {
   searchF(Mi, '.div-input > img', e, PrintedArray, Fa)
-)
+})
 
 let Cc = Cls(In, Di, Fa)
 Fa.classList.add('absolute', 'display')
 Fa.id = 'recomended-target'
+setTimeout(() => {
+  Fa.addEventListener('click', (e) => {
+    if (Fa.classList.contains('vis') && window.scrollscrollHeight > 2400) {
+      document.querySelector('#more-pictures>span').classList.add('moved')
+    } else {
+      document.querySelector('#more-pictures>span').classList.remove('moved')
+    }
+  })
+}, 2000)
 
 containerF(Fa, nla, 'Ideas recommend to you')
 containerF(Fa, nln, 'The most watched in Pinteres')

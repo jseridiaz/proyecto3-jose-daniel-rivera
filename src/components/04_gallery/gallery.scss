@@ -40,3 +40,11 @@
 [id='more-pictures']:active::after {
   background-color: #e1c174;
 }
+
+[id='more-pictures'] > span.moved {
+  z-index: 1;
+}
+span.hide {
+  position: relative;
+  z-index: 1;
+}

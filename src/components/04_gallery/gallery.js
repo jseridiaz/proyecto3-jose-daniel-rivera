@@ -5,7 +5,7 @@ import './gallery.scss'
 export let functionGalleryCreate = (array, parentNode) => {
   parentNode.innerHTML = ''
   const buttonMehr = document.createElement('button')
-  buttonMehr.innerHTML = `<span>More</span>`
+  buttonMehr.innerHTML = `<span class="hide">More</span>`
   buttonMehr.id = 'more-pictures'
   buttonMehr.style.display = 'block'
 
@@ -19,6 +19,9 @@ export let functionGalleryCreate = (array, parentNode) => {
   let bt = footerBtn(parentNode, 'Mehr')
   let foot = insertInfo(parentNode)
   let counter = 0
+  const span = document.querySelector('#more-pictures>span')
+  buttonMehr.addEventListener('mouseover', (e) => span.classList.remove('hide'))
+  buttonMehr.addEventListener('mouseout', (e) => span.classList.add('hide'))
 
   buttonMehr.addEventListener('click', (e) => {
     counter += 1
