@@ -89,7 +89,7 @@ let UF = dF(fList)
 let US = dF(sList)
 let UT = dF(tList)
 
-export const aPF = (parentNode) => {
+export const insertInfo = (parentNode) => {
   let foot = document.createElement('section')
   foot.classList.add('display', 'style-footer')
   foot.appendChild(UF)
@@ -124,6 +124,7 @@ export const lastDivInformation = () => {
   const divContact = document.createElement('div')
   const divCopy = document.createElement('div')
   const divRrss = document.createElement('div')
+  const divContainContact = document.createElement('div')
   const Ul = document.createElement('ul')
 
   footerContainer.id = 'footer-container'
@@ -144,9 +145,11 @@ export const lastDivInformation = () => {
     li.append(svg, a)
     Ul.append(li)
   }
-  divContact.innerHTML = `<img src="https://www.svgrepo.com/show/349379/gmail-old.svg" loading="lazy"><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jseridiaz@gmail.com" target="_blanket">jseridiaz@gmail.com</a>`
-  divCopy.innerHTML = `&copy All right reserved `
+  divContact.innerHTML = `<h3 class="title-contact flex-container-column">Erreichen Sie mich unter meiner E-Mail</h3>`
+  divContainContact.innerHTML = `<img src="https://www.svgrepo.com/show/349379/gmail-old.svg" loading="lazy"><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jseridiaz@gmail.com" target="_blanket">jseridiaz@gmail.com</a>`
+  divCopy.innerHTML = `Von Jose Daniel Rivera Díaz entwickelt &copy All right reserved `
   divRrss.append(Ul)
+  divContact.append(divContainContact)
   article.append(divRrss, divContact, divCopy)
   footerContainer.append(article)
 

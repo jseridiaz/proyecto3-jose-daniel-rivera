@@ -8,7 +8,7 @@ const Lc = aCreateFunction(
   'https://www.pinterest.es/',
   'https://res.cloudinary.com/ddybbosdk/image/upload/v1702769585/coyrcy80fgnitzky8wl5.webp'
 )
-const L2 = aCreateFunction('Home', '', '', '', '', '', 'btn-home')
+const L2 = aCreateFunction('Home', '', '', '#', '', '', 'btn-home')
 L2.classList.add('black-w')
 const l3 = aCreateFunction(
   'Entdecken',

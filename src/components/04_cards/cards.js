@@ -30,8 +30,6 @@ export const cardsFunction = (
 
   divInfoLeft.innerHTML = `<h4 class="nameUser" >${usuario}</h4> <h5 class="instagram"><img src="https://img.freepik.com/vektoren-premium/instagram-beliebtes-social-media-symbol-nur-redaktioneller-beitrag-kiew-ukraine-3-dezember-2019_944081-64.jpg" >${instagram}</h5>`
   const changeDescription = descriptionModificated(description, id)
-  console.log(description)
-  console.log(changeDescription)
   divInfoRight.innerHTML = `<p class="decription-paragraph">${changeDescription}</p>`
 
   aleatorietyColor(divInfoLeft)

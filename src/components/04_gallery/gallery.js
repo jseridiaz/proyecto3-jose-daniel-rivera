@@ -1,5 +1,5 @@
 import { cardsFunction } from '../04_cards/cards'
-import { aPF, footerBtn } from '../06_footer/footer'
+import { insertInfo, footerBtn } from '../06_footer/footer'
 import './gallery.scss'
 
 export let functionGalleryCreate = (array, parentNode) => {
@@ -17,7 +17,7 @@ export let functionGalleryCreate = (array, parentNode) => {
 
   buttonMehr.addEventListener('click', (e) => {})
   let bt = footerBtn(parentNode, 'Mehr')
-  let foot = aPF(parentNode)
+  let foot = insertInfo(parentNode)
   let counter = 0
 
   buttonMehr.addEventListener('click', (e) => {

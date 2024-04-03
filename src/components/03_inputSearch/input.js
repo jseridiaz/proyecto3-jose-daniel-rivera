@@ -34,7 +34,7 @@ export let Cls = (selector, parentNode, divNews) => {
   })
   if (cl) {
     cl.addEventListener('click', (e) => {
-      document.querySelector('input').value = ''
+      // document.querySelector('input').value = ''
       Cc.remove()
       divNews.classList.add('display')
     })
@@ -69,7 +69,7 @@ export let aIs = (toAppend, query) => {
     .then((res) => res.results)
     .then((res) => {
       if (!res || res == []) {
-        toAppend.innerHTML = `<div class= flex-container no-exist> En estos momentos no hemos podido encontrar las imagenes pedidas. Puedes volver a intentarlo más tarde </div>`
+        toAppend.innerHTML = `<div class= "flex-container no-exist"> No se han encontrado resultados con la busqueda actual.Puedes volver a intentarlo más tarde. </div>`
       }
       return res
     })

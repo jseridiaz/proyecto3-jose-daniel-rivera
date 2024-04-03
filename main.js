@@ -50,11 +50,6 @@ const mP = async () => {
 }
 let PrintedArray = mP()
 
-PrintedArray.then((res) =>
-  console.log(
-    document.querySelector('.single-div-img').getBoundingClientRect.width
-  )
-)
 // fetch(
 //   'https://api.unsplash.com/collections/200/related?client_id=LzkVOm32NiYozQsqu20TP9cBnlr3pZveN0GsaHS0nEE&Accept-Version=1'
 // )

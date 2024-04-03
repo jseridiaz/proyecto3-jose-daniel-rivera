@@ -1,6 +1,7 @@
 // *function to click
 import { functionGalleryCreate } from '../04_gallery/gallery'
 import { aIs } from '../03_inputSearch/input'
+import { insertInfo, footerBtn } from '../06_footer/footer'
 export const searchF = (parentNode, selector, e, original, divNew) => {
   let query
 
@@ -20,15 +21,26 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
           .then((res) => res.json())
           .then((res) => res.results)
           .then((res) => {
-            return res
-          })
-          .then((res) => {
-            if (!res || res == []) {
-              parentNode.innerHTML = `<div class= flex-container no-exist> En estos momentos no hemos podido encontrar las imagenes pedidas. Puedes volver a intentarlo más tarde </div>`
+            if (res.length > 0) {
+              functionGalleryCreate(res, parentNode)
+              document
+                .querySelector('#footer-container')
+                .classList.remove('absolute-footer')
+              document.querySelector('#more-pictures').style.display = 'block'
+            } else {
+              parentNode.innerHTML = `<div class= "flex-container no-exist"> No se han encontrado resultados con la busqueda actual. Puedes volver a intentarlo más tarde. </div>`
+              let buttonInfo = footerBtn(parentNode, 'Mehr')
+              let sectionInfo = insertInfo(parentNode)
+              document.querySelector('#more-pictures').style.display = 'none'
+              buttonInfo.addEventListener('click', (e) =>
+                sectionInfo.classList.toggle('display')
+              )
+              document
+                .querySelector('#footer-container')
+                .classList.add('absolute-footer')
             }
-            return res
           })
-          .then((res) => functionGalleryCreate(res, parentNode))
+
         divNew.classList.add('display')
       }
     }
@@ -48,7 +60,22 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
           return res
         })
         .then((res) => res.results)
-        .then((res) => functionGalleryCreate(res, parentNode))
+        .then((res) => {
+          if (res.length > 0) {
+            functionGalleryCreate(res, parentNode)
+            document
+              .querySelector('#footer-container')
+              .classList.remove('absolute-footer')
+            document.querySelector('#more-pictures').style.display = 'block'
+          } else {
+            ;(parentNode.innerHTML = `<div class= "flex-container no-exist"> No se han encontrado resultados con la busqueda actual. Puedes volver a intentarlo más tarde. </div>`),
+              insertInfo(parentNode),
+              document
+                .querySelector('#footer-container')
+                .classList.add('absolute-footer')
+            document.querySelector('#more-pictures').style.display = 'none'
+          }
+        })
       divNew.classList.add('display')
     }
   }
