@@ -101,10 +101,6 @@ const animationDivsCards = (divleft, divright, container) => {
 
     changeColorRight(divright)
     changeColorLeft(divleft)
-
-    if (divleft.childNodes[2].childNodes[1].data == null) {
-      console.log('no')
-    }
   })
   container.addEventListener('mouseout', (e) => {
     divleft.classList.toggle('explained')
@@ -141,17 +137,9 @@ const changeColorLeft = (divleft) => {
     divleft.childNodes[2].childNodes[1].textContent = 'Unbestimmt'
   }
 }
-
-const removeId = (selector, id) => {
-  const sentence = document.querySelector(`${selector}`)
-  if (sentence.textContent.includes(id)) {
-    sentence.textContent.replace(id, '')
-  }
-  console.log(sentence)
-}
-
 const descriptionModificated = (description, id) => {
-  let firstChangeDescription = description.replaceAll('-', ' ')
-  let lastChangeDescription = firstChangeDescription.replace(`${id}`, '')
+  let firstChangeDescription = description.replace(`${id}`, '')
+  let lastChangeDescription = firstChangeDescription.replaceAll('-', ' ')
+
   return lastChangeDescription
 }

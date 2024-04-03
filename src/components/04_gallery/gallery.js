@@ -22,18 +22,18 @@ export let functionGalleryCreate = (array, parentNode) => {
 
   buttonMehr.addEventListener('click', (e) => {
     counter += 1
-    morePicturesEvent(counter, parentNode, buttonMehr, query)
+    morePicturesEvent(counter, parentNode, buttonMehr)
   })
   bt.addEventListener('click', () => {
     foot.classList.toggle('display')
   })
 }
 
-const morePicturesEvent = async (counter, parentNode, query = '') => {
+const morePicturesEvent = async (counter, parentNode) => {
   console.log(counter)
   let queryValue = document.querySelector('.style-input>input').value
   console.log(queryValue)
-  if (query === '') {
+  if (queryValue === '') {
     const picturesRequest = await fetch(
       `https://api.unsplash.com/photos/random?client_id=${
         import.meta.env.VITE_SECRET_KEY
