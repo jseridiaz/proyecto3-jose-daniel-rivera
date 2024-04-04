@@ -5,8 +5,8 @@ const Lc = aCreateFunction(
   '',
   'transparent',
   '',
-  'https://www.pinterest.es/',
-  'https://res.cloudinary.com/ddybbosdk/image/upload/v1702769585/coyrcy80fgnitzky8wl5.webp'
+  '#',
+  'https://res.cloudinary.com/ddybbosdk/image/upload/v1712220993/Sin_t%C3%ADtulo-1-2_dvhl9q.png'
 )
 const L2 = aCreateFunction('Home', '', '', '#', '', '', 'btn-home')
 L2.classList.add('black-w')
