@@ -22,12 +22,13 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
           .then((res) => res.json())
           .then((res) => res.results)
           .then((res) => {
-            if (res.length > 0) {
+            if (res.length > 4) {
               functionGalleryCreate(res, parentNode)
               footer.classList.remove('absolute-footer')
               footer.classList.remove('relative-footer')
               document.querySelector('#more-pictures').style.display = 'block'
             } else if (res.length <= 4) {
+              functionGalleryCreate(res, parentNode)
               footer.classList.add('relative-footer')
               footer.classList.remove('absolute-footer')
             } else {
@@ -63,19 +64,20 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
         })
         .then((res) => res.results)
         .then((res) => {
-          if (res.length > 0) {
+          let footer = document.querySelector('#footer-container')
+          if (res.length > 4) {
             functionGalleryCreate(res, parentNode)
-
-            document
-              .querySelector('#footer-container')
-              .classList.remove('absolute-footer')
+            footer.classList.remove('absolute-footer')
             document.querySelector('#more-pictures').style.display = 'block'
+          } else if (res.length <= 4) {
+            functionGalleryCreate(res, parentNode)
+            footer.classList.add('relative-footer')
+            footer.classList.remove('absolute-footer')
           } else {
+            console.log(res)
             ;(parentNode.innerHTML = `<div class= "flex-container no-exist"> No se han encontrado resultados con la busqueda actual. Puedes volver a intentarlo más tarde. </div>`),
               insertInfo(parentNode),
-              document
-                .querySelector('#footer-container')
-                .classList.add('absolute-footer')
+              footer.classList.add('absolute-footer')
             document.querySelector('#more-pictures').style.display = 'none'
           }
         })
