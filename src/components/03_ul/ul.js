@@ -10,17 +10,12 @@ const Lc = aCreateFunction(
 )
 const L2 = aCreateFunction('Home', '', '', '#', '', '', 'btn-home')
 L2.classList.add('black-w')
-const l3 = aCreateFunction(
-  'Entdecken',
-  '',
-  '',
-  'https://www.pinterest.es/today/'
-)
+const l3 = aCreateFunction('Entdecken', '', '', '#')
 const l4 = aCreateFunction(
   'Erstellen',
   '',
   '',
-  'https://www.pinterest.es/pin-creation-tool/',
+  '#',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB7lQ2oYn7tNiO_9Ml77tqJaR28AzFRar7rA&usqp=CAU'
 )
 
@@ -58,6 +53,14 @@ export const changCol = ({ selector, classToAdd, classToRemove }) => {
   for (let i = 0; i < read.length; i++) {
     const element = read[i]
     element.addEventListener('click', (e) => {
+      // fetch(
+      //   `https://api.unsplash.com/photos/random?client_id=${
+      //     import.meta.env.VITE_SECRET_KEY
+      //   }&Accept-Version=1&count=30`
+      // )
+      //   .then((res) => res.json())
+      //   .then((res) => functionGalleryCreate(arrayp, Mi))
+
       element.classList.add(classToAdd)
       addDisplay(element)
       if (element.classList.contains(classToRemove)) {
