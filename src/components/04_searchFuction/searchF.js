@@ -27,7 +27,7 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
               footer.classList.remove('absolute-footer')
               footer.classList.remove('relative-footer')
               document.querySelector('#more-pictures').style.display = 'block'
-            } else if (res.length <= 4) {
+            } else if (res.length <= 4 && res.length > 0) {
               functionGalleryCreate(res, parentNode)
               footer.classList.add('relative-footer')
               footer.classList.remove('absolute-footer')
@@ -69,7 +69,7 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
             functionGalleryCreate(res, parentNode)
             footer.classList.remove('absolute-footer')
             document.querySelector('#more-pictures').style.display = 'block'
-          } else if (res.length <= 4) {
+          } else if (res.length <= 4 && res.length > 0) {
             functionGalleryCreate(res, parentNode)
             footer.classList.add('relative-footer')
             footer.classList.remove('absolute-footer')
