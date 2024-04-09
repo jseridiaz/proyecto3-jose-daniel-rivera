@@ -64,6 +64,7 @@
   padding: 2px;
   border-radius: 4px;
   font-size: 0.7rem;
+  background-color: transparent;
 }
 .style-footer > ul:not(ul:first-of-type) > li > a:hover {
   text-decoration: underline;
@@ -108,6 +109,7 @@ ul > li:not(li:first-child) > a:focus {
   width: 20px;
   height: 20px;
   cursor: pointer;
+  background-color: transparent;
 }
 .style-footer > ul:first-of-type ~ ul > li > a {
   color: #0e0d0d;
@@ -220,8 +222,9 @@ footer[id='footer-container']
   > li:nth-of-type(3)
   > a::after {
   bottom: 3%;
-  background-color: #f85427;
+  background-color: #eb0707;
   left: 0%;
+  bottom: -10%;
 }
 footer[id='footer-container']
   > [id='content-of-footer']
@@ -249,6 +252,7 @@ footer[id='footer-container']
   right: 0;
   background-color: #1615157e;
   transform: scaleX(0);
+  bottom: -10%;
 }
 footer[id='footer-container']
   > [id='content-of-footer']
