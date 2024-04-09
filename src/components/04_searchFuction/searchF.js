@@ -20,7 +20,10 @@ export const searchF = (parentNode, selector, e, original, divNew) => {
           }&per_page=30&query=${query}`
         )
           .then((res) => res.json())
-          .then((res) => res.results)
+          .then((res) => {
+            console.log(res)
+            return res.results
+          })
           .then((res) => {
             if (res.length > 4) {
               functionGalleryCreate(res, parentNode)

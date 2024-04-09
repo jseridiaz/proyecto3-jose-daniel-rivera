@@ -6,7 +6,7 @@ const Lc = aCreateFunction(
   'transparent',
   '',
   '#',
-  'https://res.cloudinary.com/ddybbosdk/image/upload/v1712220993/Sin_t%C3%ADtulo-1-2_dvhl9q.png'
+  'https://res.cloudinary.com/ddybbosdk/image/upload/v1712390544/Logo_Fotogallery_wm24qa.png'
 )
 const L2 = aCreateFunction('Home', '', '', '#', '', '', 'btn-home')
 L2.classList.add('black-w')
