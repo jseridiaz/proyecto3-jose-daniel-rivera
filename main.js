@@ -22,15 +22,6 @@ import { lastDivInformation } from './src/components/06_footer/footer'
 // *Lectura del container del header
 let H = document.querySelector('header')
 
-iH()
-iI()
-iB()
-changCol({
-  selector: 'header>article>nav>ul>li>a',
-  classToAdd: 'black-w',
-  classToRemove: 'white-b'
-})
-
 let Mi = document.createElement('main')
 let footer = lastDivInformation()
 document.body.appendChild(Mi)
@@ -41,7 +32,7 @@ const mP = async () => {
   const arrayP = await fetch(
     `https://api.unsplash.com/photos/random?client_id=${
       import.meta.env.VITE_SECRET_KEY
-    }&Accept-Version=1&count=40`
+    }&Accept-Version=1&count=30`
   )
   const arrayp = await arrayP.json()
 
@@ -51,6 +42,37 @@ const mP = async () => {
 let PrintedArray = mP().then((res) => {
   document.body.appendChild(footer)
   return res
+})
+iH()
+iI()
+iB()
+changCol({
+  selector: 'header>article>nav>ul>li>*',
+  classToAdd: 'black-w',
+  classToRemove: 'white-b'
+})
+
+document.querySelector('#btn-home').addEventListener('click', (e) => {
+  fetch(
+    `https://api.unsplash.com/photos/random?client_id=${
+      import.meta.env.VITE_SECRET_KEY
+    }&Accept-Version=1&count=30`
+  )
+    .then((res) => res.json())
+    .then((res) => {
+      mP()
+    })
+})
+document.querySelector('#btn-logo').addEventListener('click', (e) => {
+  fetch(
+    `https://api.unsplash.com/photos/random?client_id=${
+      import.meta.env.VITE_SECRET_KEY
+    }&Accept-Version=1&count=30`
+  )
+    .then((res) => res.json())
+    .then((res) => {
+      mP()
+    })
 })
 
 const In = document.querySelector('input')
