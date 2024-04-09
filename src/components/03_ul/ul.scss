@@ -6,3 +6,17 @@
   background-color: white;
   color: black;
 }
+[id='btn-logo'] {
+  border-radius: 50%;
+  border: none;
+  width: 70%;
+  height: 70%;
+  img {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+[id='btn-logo']:hover {
+  background-color: grey;
+}

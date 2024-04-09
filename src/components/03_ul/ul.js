@@ -1,15 +1,17 @@
 import { aCreateFunction } from '../01_aButton/aButton'
+import { btnC } from '../02_CButton/CButton'
 import './ul.scss'
 
-const Lc = aCreateFunction(
+const Lc = btnC(
   '',
   'transparent',
   '',
-  '#',
-  'https://res.cloudinary.com/ddybbosdk/image/upload/v1712390544/Logo_Fotogallery_wm24qa.png'
+  'https://res.cloudinary.com/ddybbosdk/image/upload/v1712390544/Logo_Fotogallery_wm24qa.png',
+  'btn-logo'
 )
-const L2 = aCreateFunction('Home', '', '', '#', '', '', 'btn-home')
+const L2 = btnC('Home', '', '', '', 'btn-home', 'Home')
 L2.classList.add('black-w')
+
 const l3 = aCreateFunction('Entdecken', '', '', '#')
 const l4 = aCreateFunction(
   'Erstellen',
@@ -34,6 +36,7 @@ export const ulCreate = () => {
     li.appendChild(element)
     Ul.appendChild(li)
   }
+
   nv.appendChild(Ul)
   return nv
 }
