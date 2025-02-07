@@ -34,7 +34,7 @@ export let Cls = (selector, parentNode, divNews) => {
   })
   if (cl) {
     cl.addEventListener('click', (e) => {
-      // document.querySelector('input').value = ''
+      document.querySelector('input').value = ''
       Cc.remove()
       divNews.classList.add('display')
     })
