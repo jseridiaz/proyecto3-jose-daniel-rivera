@@ -109,7 +109,7 @@ export const lastDivInformation = () => {
     },
     {
       img: 'https://www.svgrepo.com/show/486263/developer-centerpublic-api.svg',
-      url: 'https://portfolio-fullstack-josedaniel-rivera.netlify.app/',
+      url: 'https://jose-daniel-rivera-diaz-portfolio-fullstack.vercel.app/',
       rrss: 'Portafolio'
     },
     {
